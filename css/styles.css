@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Use Roc Grotesk everywhere (make sure it’s loaded) */
+:root {
+  --bs-font-sans-serif: 'Roc Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+body {
+  background-color: #FFF9ED; /* fallback */
+  background: linear-gradient(to bottom, #EEF7EE 0%, #FFF9ED 100%);
+  font-family: var(--bs-font-sans-serif);
+}
+
+#guitar-pick {
+  height: 40px;
+  margin: auto;
+}
+
+/* Submenu (single, consolidated rule) */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 180px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+/* Show on hover */
+.nav-item:hover .submenu { display: block; }
+
+/* Submenu items */
+.submenu li a {
+  display: block;
+  padding: 8px 12px;
+  color: #212529;
+  text-decoration: none;
+}
+
+.submenu li a:hover { background-color: #f1f3f5; }
+
+/* Ensure submenu anchors to parent */
+.nav-item { position: relative; }
+
+/* Transparent navbar overlaying hero */
+header, .navbar {
+  background: transparent !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: transform .3s ease; /* smooth hide/show */
+  will-change: transform;
+}
+
+/* Navbar link colors (paired with navbar-dark) */
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover { color: #e9ecef !important; }
+
+/* Hide-on-scroll behavior */
+.header-hidden { transform: translateY(-120%); }
+.header-hidden .navbar { transform: translateY(-120%); }
+
+/* Add spacing between nav items */
+.navbar-nav { gap: 1.25rem; }
+
+/* Hero section background image (relative path) */
+.hero-section {
+  height: 50vh;
+  background: url('../images/chase-yi-IeTLKtzbLNo-unsplash.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Optional overlay for better text contrast */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Ensure hero text sits above overlay */
+.hero-content {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;            /* bottom-left placement */
+  z-index: 2;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.25rem, 3vw, 2rem); /* smaller */
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Make CTA buttons transparent and borderless */
+.hero-content .btn {
+  background: transparent !important;
+  border: 0 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 9999px; /* oval */
+  padding: 0.5rem 1rem;      /* slightly smaller */
+  font-size: .9rem;          /* smaller text */
+}
+.hero-content .btn:hover {
+  text-decoration: none !important;
+  background: #343a40 !important; /* dark grey on hover */
+  color: #fff !important;
+}
+
+/* Nav action buttons: transparent, borderless */
+.nav-actions .btn {
+  background: transparent !important;
+  border: 0 !important;
+  color: #fff !important;
+}
+.nav-actions .btn:hover { color: #e9ecef !important; }
+.nav-actions .btn:focus { box-shadow: none !important; }
+
+/* Featured products */
+.featured-products h1,
+.hollow-body h1 {
+  color: #212529;
+}
+
+.product-card {
+  border: none;
+  background-color: transparent !important; /* remove white card background */
+  box-shadow: none;
+}
+
+/* Make product cards feel clickable */
+.product-card { cursor: pointer; }
+.product-card .product-img,
+.product-card .img-placeholder { cursor: pointer; }
+
+/* Center product name and price under image */
+.product-card .card-body {
+  text-align: center;
+}
+
+.img-placeholder {
+  background-color: #e9ecef;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+}
+
+.img-placeholder .placeholder-text {
+  font-size: .95rem;
+}
+
+/* Product images inside ratio frames */
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: .5rem;
+  display: block;
+}
+
+/* Promo banner with image and overlay text */
+.promo-box { position: relative; }
+.promo-image {
+  width: 100%;
+  height: 50vh; /* relatively big; adjust as needed */
+  object-fit: cover;
+  border-radius: .5rem;
+  display: block;
+}
+.promo-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  border-radius: .5rem;
+  z-index: 1;
+}
+.promo-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;      /* stack text and button */
+  align-items: flex-start;      /* left aligned */
+  justify-content: flex-end;    /* bottom aligned */
+  gap: .5rem;
+  padding: 1.5rem;             /* spacing from edges */
+  color: #fff;
+  z-index: 2;
+}
+.promo-content h2 {
+  font-size: clamp(.9rem, 2vw, 1.25rem); /* smaller */
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Modal product carousel: keep a consistent viewport and prevent resizing between slides */
+#productCarousel .carousel-inner { position: relative; }
+#productCarousel .carousel-item {
+  position: relative;
+  width: 100%;
+  height: min(60vh, 480px); /* fixed, responsive height to avoid modal jumping */
+}
+@media (max-width: 576px) {
+  #productCarousel .carousel-item { height: 300px; }
+}
+#productCarousel .carousel-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* show full image, maintain modal size */
+  border-radius: .5rem;
+}
+.promo-content .btn {
+  background: transparent !important;
+  border: 0 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 9999px; /* oval */
+  padding: 0.5rem 1rem;      /* slightly smaller */
+  font-size: .9rem;          /* smaller text */
+}
+.promo-content .btn:hover {
+  text-decoration: none !important;
+  background: #343a40 !important; /* dark grey on hover */
+  color: #fff !important;
+}
+
+/* Performance: skip rendering off-screen sections until needed */
+.featured-products,
+.promo-banner,
+.hollow-body,
+.mini-gallery,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px; /* reserve space to prevent layout shift */
+}
+
+/* Acoustic CTA button: transparent default, dark on hover */
+.acoustic-cta .btn,
+.amps-cta .btn,
+.pedals-cta .btn {
+  background: transparent !important;
+  border: 0 !important;
+  color: #212529 !important;
+  text-decoration: none !important;
+  border-radius: 9999px;
+  padding: 0.6rem 1.25rem;
+}
+.acoustic-cta .btn:hover,
+.amps-cta .btn:hover,
+.pedals-cta .btn:hover {
+  background: #343a40 !important;
+  color: #fff !important;
+}
+
+/* Mini gallery narrower than promo */
+.mini-gallery .gallery-wrap {
+  width: 75%;
+  max-width: 1100px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: .5rem;
+  display: block;
+}
+
+/* Footer */
+.site-footer {
+  background: #2b2b2b; /* charcoal gray */
+  color: #e9ecef;
+}
+.site-footer h3,
+.site-footer h5 { color: #fff; }
+.site-footer .footer-links a,
+.site-footer .footer-legal-links a,
+.site-footer .footer-link { color: #adb5bd; text-decoration: none; }
+.site-footer .footer-links a:hover,
+.site-footer .footer-legal-links a:hover,
+.site-footer .footer-link:hover { color: #fff; text-decoration: underline; }
+.site-footer .footer-divider { border-color: rgba(255,255,255,.15); }
+.site-footer .footer-input {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.35);
+  color: #fff;
+}
+.site-footer .footer-input::placeholder { color: #ced4da; }
+.site-footer .footer-input:focus { box-shadow: none; border-color: #fff; }
+.site-footer .footer-btn { border-radius: 9999px; }

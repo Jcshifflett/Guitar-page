@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedals</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../acs/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarMenu">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../electric/electric.html">Guitars</a>
+              <ul class="submenu">
+                <li><a href="../electric/electric.html">Electric</a></li>
+                <li><a href="../acoustic/acoustic.html">Acoustic</a></li>
+                <li><a href="../bass/bass.html">Bass</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../pedals/pedals.html">Pedals</a></li>
+            <li class="nav-item"><a class="nav-link" href="../accesories/accesories.html">Accessories</a></li>
+          </ul>
+          <div class="d-flex justify-content-center w-100">
+            <a class="nav-link active" aria-current="page" href="../html/index.html">
+              <img id="guitar-pick" src="../images/guitar-pick.png" alt="Logo">
+            </a>
+          </div>
+          <div class="d-flex align-items-center gap-2 nav-actions">
+            <button type="button" class="btn btn-outline-light">Login</button>
+            <button type="button" class="btn btn-outline-light d-flex align-items-center" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </button>
+            <button id="cart-button" type="button" class="btn btn-outline-light position-relative d-flex align-items-center" aria-label="Shopping cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 12.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </button>
+            <button type="button" class="btn btn-light">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="hollow-body py-5">
+    <div class="container">
+      <h1 class="mb-4">Pedals</h1>
+      <div id="product-grid" class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/boss_ds-1x_02_1.jpg&quot;,&quot;../images/boss2.jpg
+&quot;,&quot;../images/boss3.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/boss_ds-1x_02_1.jpg" class="product-img" alt="Pedal 1">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Boss Ds-1</h5>
+              <p class="card-text text-muted mb-0">$79.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/alejandro-morelos-6WOtQjsxlpU-unsplash.jpg&quot;,&quot;../images/angelo-barbarulo-RgalrCHht1E-unsplash.jpg&quot;,&quot;../images/apolo-photographer-xmksM4em7a0-unsplash.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/alejandro-morelos-6WOtQjsxlpU-unsplash.jpg" class="product-img" alt="Pedal 2">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Big-Muff</h5>
+              <p class="card-text text-muted mb-0">$99.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/bigmuff.jpg&quot;,&quot;../images/bigmuff2.webp&quot;,&quot;../images/bigmuff3.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/bigmuff.jpg" class="product-img" alt="Pedal 3">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Big-Muff</h5>
+              <p class="card-text text-muted mb-0">$129.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/apolo-photographer-xmksM4em7a0-unsplash.jpg&quot;,&quot;../images/brent-ninaber-C8gib_msapY-unsplash.jpg&quot;,&quot;../images/chase-yi-IeTLKtzbLNo-unsplash.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/apolo-photographer-xmksM4em7a0-unsplash.jpg" class="product-img" alt="Pedal 4">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Pedal 4</h5>
+              <p class="card-text text-muted mb-0">$69.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/brent-ninaber-C8gib_msapY-unsplash.jpg&quot;,&quot;../images/chase-yi-IeTLKtzbLNo-unsplash.jpg&quot;,&quot;../images/chris-hardy-NiDzAHcbPTM-unsplash.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/brent-ninaber-C8gib_msapY-unsplash.jpg" class="product-img" alt="Pedal 5">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Pedal 5</h5>
+              <p class="card-text text-muted mb-0">$149.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/chase-yi-IeTLKtzbLNo-unsplash.jpg&quot;,&quot;../images/chris-hardy-NiDzAHcbPTM-unsplash.jpg&quot;,&quot;../images/chris-murray-ZEEX1vWXPjQ-unsplash.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/chase-yi-IeTLKtzbLNo-unsplash.jpg" class="product-img" alt="Pedal 6">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Pedal 6</h5>
+              <p class="card-text text-muted mb-0">$59.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/chris-hardy-NiDzAHcbPTM-unsplash.jpg&quot;,&quot;../images/chris-murray-ZEEX1vWXPjQ-unsplash.jpg&quot;,&quot;../images/eng-hs-ln4pLsqW6EA-unsplash.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/chris-hardy-NiDzAHcbPTM-unsplash.jpg" class="product-img" alt="Pedal 7">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Pedal 7</h5>
+              <p class="card-text text-muted mb-0">$119.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/chris-murray-ZEEX1vWXPjQ-unsplash.jpg&quot;,&quot;../images/eng-hs-ln4pLsqW6EA-unsplash.jpg&quot;,&quot;../images/guilherme-paiva-OzSAqN4MjNE-unsplash.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/chris-murray-ZEEX1vWXPjQ-unsplash.jpg" class="product-img" alt="Pedal 8">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Pedal 8</h5>
+              <p class="card-text text-muted mb-0">$89.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/eng-hs-ln4pLsqW6EA-unsplash.jpg&quot;,&quot;../images/guilherme-paiva-OzSAqN4MjNE-unsplash.jpg&quot;,&quot;../images/k3nt--RswvsTYiAI-unsplash.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/eng-hs-ln4pLsqW6EA-unsplash.jpg" class="product-img" alt="Pedal 9">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Pedal 9</h5>
+              <p class="card-text text-muted mb-0">$139.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/guilherme-paiva-OzSAqN4MjNE-unsplash.jpg&quot;,&quot;../images/k3nt--RswvsTYiAI-unsplash.jpg&quot;,&quot;../images/kevin-west-ci6TQb-4cRA-unsplash.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/guilherme-paiva-OzSAqN4MjNE-unsplash.jpg" class="product-img" alt="Pedal 10">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Pedal 10</h5>
+              <p class="card-text text-muted mb-0">$99.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/k3nt--RswvsTYiAI-unsplash.jpg&quot;,&quot;../images/kevin-west-ci6TQb-4cRA-unsplash.jpg&quot;,&quot;../images/khang-do-cAGlZfg94uE-unsplash.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/k3nt--RswvsTYiAI-unsplash.jpg" class="product-img" alt="Pedal 11">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Pedal 11</h5>
+              <p class="card-text text-muted mb-0">$79.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 product-card" data-gallery="[&quot;../images/kevin-west-ci6TQb-4cRA-unsplash.jpg&quot;,&quot;../images/khang-do-cAGlZfg94uE-unsplash.jpg&quot;,&quot;../images/kornelije-casni-WA6Zu5lOt3Y-unsplash.jpg&quot;]">
+            <div class="ratio ratio-4x3">
+              <img loading="lazy" src="../images/kevin-west-ci6TQb-4cRA-unsplash.jpg" class="product-img" alt="Pedal 12">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Pedal 12</h5>
+              <p class="card-text text-muted mb-0">$129.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../js/script.js"></script>
+
+</body>
+</html>
